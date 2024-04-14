@@ -7,7 +7,7 @@ const indicators = (await Astro.glob("./tones/*.{md,mdx}")) as IToneTag[];
 ---
 
 <Base title="tonetags" description="in-depth, extensive tonetag dictionary.">
-  <main class="prose w-2/4 mx-auto mt-[5rem]">
+  <main class="prose w-3/4 md:w-2/4 mx-auto mt-[5rem]">
     <div class="flex items-center justify-center flex-col">
       <p>
         <small class="text-neutral-500">tone tags</small>
@@ -30,7 +30,7 @@ const indicators = (await Astro.glob("./tones/*.{md,mdx}")) as IToneTag[];
       </p>
     </div>
     <div class="flex items-center justify-center flex-col mt-12">
-      <div class="w-fit grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div class="w-fit grid gap-4 grid-cols-2 lg:grid-cols-3">
         <ToneTags posts={indicators} />
       </div>
     </div>
