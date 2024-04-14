@@ -1,0 +1,19 @@
+---
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { AlertCircle } from "lucide-react";
+
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<Alert variant="default" className="border-blue-500 mb-4">
+  <AlertCircle className="h-4 w-4" />
+  <AlertTitle>{title}</AlertTitle>
+  <AlertDescription>
+    {description}
+  </AlertDescription>
+</Alert>

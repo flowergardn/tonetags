@@ -1,0 +1,42 @@
+---
+import { GITHUB_URL } from "@/config";
+import Base from "./Base.astro";
+
+export interface Props {
+  content: {
+    fullForm: string;
+    tag: string;
+  };
+}
+
+const {
+  content: { fullForm, tag },
+} = Astro.props;
+---
+
+<>
+  <Base
+    title={`tonetags :: ${tag}`}
+    description=`explanations, examples, and more about the ${tag} tone tag.`
+  >
+    <main class="prose w-1/4 mx-auto mt-[5rem]">
+      <p class="flex items-center gap-4">
+        <small class="text-neutral-500 float-left">{tag}</small>
+      </p>
+      <p class="flex items-center gap-4">
+        {fullForm}
+      </p>
+      <p class="flex items-center gap-4 text-neutral-300 mt-2">
+        <a
+          href={`${GITHUB_URL}/tree/main/src/pages/tones/${tag}.mdx`}
+          class="hover:underline"
+        >
+          edit page
+        </a>
+        <a href="/" class="hover:underline">view more</a>
+      </p>
+      <hr class="border-t-neutral-700 my-8" />
+      <slot />
+    </main>
+  </Base>
+</>

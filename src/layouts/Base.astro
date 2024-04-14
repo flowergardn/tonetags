@@ -1,0 +1,23 @@
+---
+import BaseHead from "@/components/BaseHead.astro";
+import Footer from "@/components/Footer.astro";
+
+type Props = {
+  title: string;
+  description: string;
+};
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+  <BaseHead title={title} description={description} />
+
+  <body class="dark">
+    <div class="mx-auto max-w-full px-4">
+      <slot />
+      <div class="mt-24"></div>
+    </div>
+    <Footer />
+  </body>
+</html>

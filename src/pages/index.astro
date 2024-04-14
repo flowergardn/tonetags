@@ -1,0 +1,38 @@
+---
+import "@/styles/globals.css";
+import Base from "../layouts/Base.astro";
+import { ToneTags } from "@/components/tonetags/All";
+import type { IToneTag } from "@/types";
+const indicators = (await Astro.glob("./tones/*.{md,mdx}")) as IToneTag[];
+---
+
+<Base title="tonetags" description="in-depth, extensive tonetag dictionary.">
+  <main class="prose w-2/4 mx-auto mt-[5rem]">
+    <div class="flex items-center justify-center flex-col">
+      <p>
+        <small class="text-neutral-500">tone tags</small>
+        <br />
+        welcome to the tone tag dictionary!<br />
+        <br />tone tags are indicators used within speech to help readers
+        understand tone. <br />they're often used by people with neurodiversity,
+        and they tend to help out a lot.<br /> below are <span class="italic"
+          >some</span
+        > tone tags, but be aware it's not an exaustive list.
+        <br />
+        <br />
+        this site was made by <a
+          href="https://astrid.sh"
+          class="text-pink-300 hover:underline">astrid</a
+        > and is open source on <a
+          href="https://github.com/astridlol/tonetags"
+          class="text-pink-300 hover:underline">github</a
+        > &lt;3
+      </p>
+    </div>
+    <div class="flex items-center justify-center flex-col mt-12">
+      <div class="w-fit grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <ToneTags posts={indicators} />
+      </div>
+    </div>
+  </main>
+</Base>

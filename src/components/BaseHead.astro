@@ -1,0 +1,55 @@
+---
+import "@/styles/globals.css";
+
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<head>
+  <!-- global metadata -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link
+    rel="icon"
+    type="image/png"
+    href="https://cdn.upload.systems/uploads/r2svMbGk.png"
+  />
+  <meta name="theme-color" content="#9fd7ee" />
+  <meta name="generator" content={Astro.generator} />
+
+  <!-- primary meta tags -->
+  <title>{title}</title>
+  <meta name="title" content={title} />
+  <meta name="description" content={description} />
+
+  <!-- open graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="tone tags" />
+  <meta property="og:url" content={Astro.url} />
+  <meta
+    property="og:image"
+    content="https://cdn.upload.systems/uploads/r2svMbGk.png"
+  />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="256" />
+  <meta property="og:image:height" content="256" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+
+  <!-- twitter -->
+  <meta property="twitter:url" content={Astro.url} />
+  <meta property="twitter:title" content={title} />
+  <meta property="twitter:description" content={description} />
+
+  <!-- link tags -->
+  <link rel="sitemap" href="/sitemap-index.xml" />
+
+  <script
+    defer
+    data-domain="tonetags.astrid.sh"
+    src="https://analytics.astrid.sh/js/script.js"></script>
+</head>
