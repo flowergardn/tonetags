@@ -2,13 +2,21 @@
 import "@/styles/globals.css";
 import Base from "../layouts/Base.astro";
 import { ToneTags } from "@/components/tonetags/All";
+import NewDomain from "@/components/NewDomain"
+import Donate from "@/components/Donate"
 import type { IToneTag } from "@/types";
 const indicators = (await Astro.glob("./tones/*.{md,mdx}")) as IToneTag[];
+
+const isOldDomain = Astro.url.hostname.includes("astrid.sh")
+
+export const prerender = false;
 ---
 
 <Base title="tonetags" description="in-depth, extensive tonetag dictionary.">
   <main class="prose w-3/4 md:w-2/4 mx-auto mt-[5rem]">
     <div class="flex items-center justify-center flex-col">
+      <NewDomain oldDomain={isOldDomain} client:load/>
+      <Donate client:load/>
       <p>
         <small class="text-neutral-500">tone tags</small>
         <br />
@@ -18,15 +26,6 @@ const indicators = (await Astro.glob("./tones/*.{md,mdx}")) as IToneTag[];
         and they tend to help out a lot.<br /> below are <span class="italic"
           >some</span
         > tone tags, but be aware it's not an exaustive list.
-        <br />
-        <br />
-        this site was made by <a
-          href="https://astrid.sh"
-          class="text-pink-300 hover:underline">astrid</a
-        > and is open source on <a
-          href="https://github.com/astridlol/tonetags"
-          class="text-pink-300 hover:underline">github</a
-        > &lt;3
       </p>
     </div>
     <div class="flex items-center justify-center flex-col mt-12">

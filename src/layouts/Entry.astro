@@ -1,6 +1,7 @@
 ---
 import { GITHUB_URL } from "@/config";
 import Base from "./Base.astro";
+import Donate from "@/components/Donate"
 
 export interface Props {
   content: {
@@ -20,6 +21,7 @@ const {
     description=`explanations, examples, and more about the ${tag} tone tag.`
   >
     <main class="prose w-full md:w-1/4 mx-auto mt-[5rem]">
+      <Donate client:load/>
       <p class="flex items-center gap-4">
         <small class="text-neutral-500 float-left">{tag}</small>
       </p>

@@ -6,7 +6,8 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
+  output: "hybrid",
   integrations: [react(), tailwind({
-    applyBaseStyles: true
+    applyBaseStyles: false
   }), mdx()]
 });
