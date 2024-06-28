@@ -3,8 +3,10 @@ layout: "../../layouts/Entry.astro"
 tag: "/hj"
 fullForm: "half joking"
 popular: false
+examples: ["well I am usually right /hj", "even a baby could use this /hj"]
 ---
 
+import Examples from "../../components/Examples.astro";
 import Alert from "../../components/alerts/RedAlert.astro";
 
 <Alert
@@ -19,5 +21,4 @@ The tone indicator **{frontmatter.tag}** is typically used when something is par
 
 ## Examples within messages:
 
-- well I am usually right {frontmatter.tag}
-- even a baby could use this {frontmatter.tag}
+<Examples examples={frontmatter.examples} />

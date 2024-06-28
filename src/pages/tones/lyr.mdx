@@ -3,7 +3,10 @@ layout: "../../layouts/Entry.astro"
 tag: "/lyr"
 fullForm: "lyrics"
 popular: false
+examples: ["It's a mess I don't make anymore, like a thousand times before /lyr", "She said we're friends, but nah, you're not friends with me /lyr", "Laying in my arms, you look so cute under the stars /lyr"]
 ---
+
+import Examples from "../../components/Examples.astro";
 
 This tone indicator is used to indicate that you're quoting {frontmatter.tag}. This tone indicator is similar to **/ref**, but used exclusively for {frontmatter.fullForm}.
 
@@ -18,6 +21,4 @@ This tone indicator is useful when a statement may come off as concerning, rude,
 
 ## Examples within messages:
 
-- It's a mess I don't make anymore, like a thousand times before {frontmatter.tag}
-- She said we're friends, but nah, you're not friends with me {frontmatter.tag}
-- Laying in my arms, you look so cute under the stars {frontmatter.tag}
+<Examples examples={frontmatter.examples} />

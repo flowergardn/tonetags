@@ -4,7 +4,10 @@ tag: "/genq"
 fullForm: "genuine question"
 aliases: "/gq"
 popular: false
+examples: ["Are you sure about that? /genq", "Do you need me to explain? /genq", "Clarify? /genq"]
 ---
+
+import Examples from "../../components/Examples.astro";
 
 This tone indicator is used to indicate you're asking a {frontmatter.fullForm}. It is occasionally used as **{frontmatter.aliases}**.
 
@@ -19,6 +22,4 @@ Some people use this tone indicator exclusively for questions when using **/gen*
 
 ## Examples within messages:
 
-- Are you sure about that? {frontmatter.tag}
-- Do you need me to explain? {frontmatter.tag}
-- Clarify? {frontmatter.tag}
+<Examples examples={frontmatter.examples} />

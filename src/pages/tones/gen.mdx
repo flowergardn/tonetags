@@ -4,7 +4,10 @@ tag: "/gen"
 fullForm: "genuine"
 aliases: "/g"
 popular: false
+examples: ["That was a great decision /gen", "I'm proud of you /gen", "Are you sure about that? /gen"]
 ---
+
+import Examples from "../../components/Examples.astro";
 
 ## Why should I use this?
 
@@ -14,6 +17,5 @@ This tone indicator is used to indicate you're being completely {frontmatter.ful
 
 ## Examples within messages:
 
-- That was a great decision {frontmatter.tag}
-- I'm proud of you {frontmatter.tag}
-- Are you sure about that? {frontmatter.tag}
+
+<Examples examples={frontmatter.examples} />

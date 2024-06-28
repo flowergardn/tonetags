@@ -3,7 +3,10 @@ layout: "../../layouts/Entry.astro"
 tag: "/ref"
 fullForm: "reference"
 popular: false
+examples: ["one thing i've learned from miles: it's all possible /ref"]
 ---
+
+import Examples from "../../components/Examples.astro";
 
 ## Why should I use this?
 
@@ -13,4 +16,4 @@ This tone indicator **{frontmatter.tag}** is used to declare that a message is a
 
 ## Examples within messages:
 
-- one thing i've learned from miles: it's all possible {frontmatter.tag}
+<Examples examples={frontmatter.examples} />

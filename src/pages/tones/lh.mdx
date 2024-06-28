@@ -3,7 +3,10 @@ layout: "../../layouts/Entry.astro"
 tag: "/lh"
 fullForm: "lighthearted"
 popular: false
+examples: ["hey leave me out of this /lh", "would rather not /lh"]
 ---
+
+import Examples from "../../components/Examples.astro";
 
 ## Why should I use this?
 
@@ -13,5 +16,4 @@ This tone indicator is used on messages that could sound potentially sound rude.
 
 ## Examples within messages:
 
-- hey leave me out of this {frontmatter.tag}
-- would rather not {frontmatter.tag}
+<Examples examples={frontmatter.examples} />

@@ -3,7 +3,10 @@ layout: "../../layouts/Entry.astro"
 tag: "/nm"
 fullForm: "not mad"
 popular: false
+examples: ["ouch /nm", "why did you do that? /nm", "it's fine /nm", "please don't dm me /nm", "please don't send me a friend request if i don't know you irl /nm"]
 ---
+
+import Examples from "../../components/Examples.astro";
 
 ## Why should I use this?
 
@@ -13,8 +16,4 @@ This tone indicator **{frontmatter.tag}** shows the reader that you're not actua
 
 ## Examples within messages:
 
-- ouch {frontmatter.tag}
-- why did you do that? {frontmatter.tag}
-- it's fine {frontmatter.tag}
-- please don't dm me {frontmatter.tag}
-- please don't send me a friend request if i don't know you irl {frontmatter.tag}
+<Examples examples={frontmatter.examples} />

@@ -3,7 +3,10 @@ layout: "../../layouts/Entry.astro"
 tag: "/srs"
 fullForm: "serious"
 popular: false
+examples: ["you're pretty healthy /srs", "you're sooo cool /srs"]
 ---
+
+import Examples from "../../components/Examples.astro";
 
 The tone indicator **{frontmatter.tag}** is used to declare seriousness.
 
@@ -18,5 +21,4 @@ Sometimes messages can come across as unserious, and everyone percieves differen
 
 ## Examples within messages:
 
-- you're pretty healthy {frontmatter.tag}
-- you're sooo cool {frontmatter.tag}
+<Examples examples={frontmatter.examples} />

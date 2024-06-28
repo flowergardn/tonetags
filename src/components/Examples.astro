@@ -1,0 +1,15 @@
+---
+export interface Props {
+  examples: string[];
+}
+
+const { examples } = Astro.props;
+---
+
+<ul>
+    {examples.map((example, index) => (
+        <li>
+            {example}
+        </li>
+    ))}
+</ul>
