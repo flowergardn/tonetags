@@ -31,6 +31,11 @@ export const GET: APIRoute = async (context: APIContext) => {
 
 
   return new Response(
-    JSON.stringify(sorted)
+    JSON.stringify(sorted),
+    {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
   );
 };
