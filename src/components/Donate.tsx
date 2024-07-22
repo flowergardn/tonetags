@@ -9,12 +9,16 @@ export default function Donate() {
           <img src="/sponsor.svg" alt="Sponsor Logo" className="w-16 h-auto" />
         </PopoverTrigger>
         <PopoverContent align="start">
-            <p className="text-sm"> 
-                This is a hobby project made in free time. If the site has helped you, please consider donating!
-            </p>
-            <a href={DONATE_URL} className="text-sm text-pink-300 hover:underline">
-                Click here
-            </a>
+          <p className="text-sm">
+            This is a hobby project made in free time. If the site has helped
+            you, please consider donating!
+          </p>
+          <a
+            href={DONATE_URL}
+            className="text-sm text-pink-300 hover:underline"
+          >
+            Click here
+          </a>
         </PopoverContent>
       </Popover>
     </div>
