@@ -29,8 +29,9 @@ const {
         {fullForm}
       </p>
       <p class="flex items-center gap-4 text-neutral-300 mt-2">
+        <!-- No slash after `/tones` subdirectory since tags always begin with a slash -->
         <a
-          href={`${GITHUB_URL}/tree/main/src/pages/tones/${tag}.mdx`}
+          href={`${GITHUB_URL}/tree/main/src/pages/tones${tag}.mdx`}
           class="hover:underline"
         >
           edit page
