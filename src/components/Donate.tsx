@@ -6,7 +6,7 @@ export default function Donate() {
     <div className="fixed bottom-0 left-0 p-4 opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
       <Popover>
         <PopoverTrigger>
-          <img src="/sponsor.svg" alt="Sponsor Logo" className="w-16 h-auto" />
+          <img src="/sponsor.svg" alt="Sponsor Logo" className="w-10 h-auto" />
         </PopoverTrigger>
         <PopoverContent align="start">
           <p className="text-sm">
