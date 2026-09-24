@@ -8,7 +8,7 @@ The home page is located at [tonetags.xyz](https://tonetags.xyz).
 
 ### Contributing
 
-This website is a living resource. Data will change frequently, new tone tags will be added, and etc. Feel free to reach out to me on Twitter [@maybeastrid](https://twitter.com/maybeastrid), or send me and email at [me@astrid.sh](mailto:me@astrid.sh) if you have any questions, suggestions, or feedback.<br/>
+This website is a living resource. Data will change frequently, new tone tags will be added, and etc. Feel free to create an issue if you have any questions, suggestions, or feedback.<br/>
 
 If you're familiar with contributing to open source projects, you can also submit a pull request adding new tone tags, updating examples, or fixing any issues you find.
 
