@@ -4,7 +4,7 @@ tag: "/genq"
 fullForm: "genuine question"
 aliases: "/gq"
 popular: false
-examples: ["Are you sure about that? /genq", "Do you need me to explain? /genq", "Clarify? /genq"]
+examples: ["Are you sure about that?", "Do you need me to explain?", "Clarify?"]
 ---
 
 import Examples from "../../components/Examples.astro";
@@ -22,4 +22,4 @@ Some people use this tone indicator exclusively for questions when using **/gen*
 
 ## Examples within messages:
 
-<Examples examples={frontmatter.examples} />
+<Examples examples={frontmatter.examples} tag={frontmatter.tag} />

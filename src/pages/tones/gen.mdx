@@ -4,7 +4,7 @@ tag: "/gen"
 fullForm: "genuine"
 aliases: "/g"
 popular: false
-examples: ["That was a great decision /gen", "I'm proud of you /gen", "Are you sure about that? /gen"]
+examples: ["That was a great decision", "I'm proud of you", "Are you sure about that?"]
 ---
 
 import Examples from "../../components/Examples.astro";
@@ -18,4 +18,4 @@ This tone indicator is used to indicate you're being completely {frontmatter.ful
 ## Examples within messages:
 
 
-<Examples examples={frontmatter.examples} />
+<Examples examples={frontmatter.examples} tag={frontmatter.tag} />

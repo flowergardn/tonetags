@@ -3,7 +3,7 @@ layout: "../../layouts/Entry.astro"
 tag: "/s"
 fullForm: "sarcasm"
 popular: true
-examples: ["I'm so popular /s", "I really love feeling sad /s", "Oh that's sooo fun /s"]
+examples: ["I'm so popular", "I really love feeling sad", "Oh that's sooo fun"]
 ---
 
 import Examples from "../../components/Examples.astro";
@@ -15,4 +15,4 @@ The tone indicator **{frontmatter.tag}** is used to declare sarcasm.
 
 ## Examples within messages:
 
-<Examples examples={frontmatter.examples} />
+<Examples examples={frontmatter.examples} tag={frontmatter.tag} />

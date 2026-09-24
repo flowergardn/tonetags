@@ -3,7 +3,7 @@ layout: "../../layouts/Entry.astro"
 tag: "/j"
 fullForm: "joking"
 popular: true
-examples: ["buy me nitro /j", "let's move in together /j", "you're such a meanie /j"]
+examples: ["buy me nitro", "let's move in together", "you're such a meanie"]
 ---
 
 import Examples from "../../components/Examples.astro";
@@ -21,4 +21,4 @@ This tone indicator is typically used on messages that could easily come across 
 
 ## Examples within messages:
 
-<Examples examples={frontmatter.examples} />
+<Examples examples={frontmatter.examples} tag={frontmatter.tag} />

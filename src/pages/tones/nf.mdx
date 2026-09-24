@@ -3,7 +3,7 @@ layout: "../../layouts/Entry.astro"
 tag: "/nf"
 fullForm: "not forced"
 popular: false
-examples: ["do this please /nf", "boost the server /nf"]
+examples: ["do this please", "boost the server"]
 ---
 
 import Examples from "../../components/Examples.astro";
@@ -16,4 +16,4 @@ This tone indicator **{frontmatter.tag}** is used within statements to show that
 
 ## Examples within messages:
 
-<Examples examples={frontmatter.examples} />
+<Examples examples={frontmatter.examples} tag={frontmatter.tag} />

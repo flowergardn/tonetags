@@ -3,7 +3,7 @@ layout: "../../layouts/Entry.astro"
 tag: "/p"
 fullForm: "platonically"
 popular: true
-examples: ["I love you /p", "*hugs* /p", "Hearts and Love <3 /p"]
+examples: ["I love you", "*hugs*", "hearts and love <3"]
 ---
 
 import Examples from "../../components/Examples.astro";
@@ -15,4 +15,4 @@ The tone indicator **{frontmatter.tag}** is used to declare platonic association
 
 ## Examples within messages:
 
-<Examples examples={frontmatter.examples} />
+<Examples examples={frontmatter.examples} tag={frontmatter.tag} />

@@ -3,7 +3,7 @@ layout: "../../layouts/Entry.astro"
 tag: "/srs"
 fullForm: "serious"
 popular: false
-examples: ["you're pretty healthy /srs", "you're sooo cool /srs"]
+examples: ["you're pretty healthy", "you're sooo cool"]
 ---
 
 import Examples from "../../components/Examples.astro";
@@ -21,4 +21,4 @@ Sometimes messages can come across as unserious, and everyone percieves differen
 
 ## Examples within messages:
 
-<Examples examples={frontmatter.examples} />
+<Examples examples={frontmatter.examples} tag={frontmatter.tag} />

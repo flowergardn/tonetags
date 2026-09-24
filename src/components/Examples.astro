@@ -3,13 +3,13 @@ export interface Props {
   examples: string[];
 }
 
-const { examples } = Astro.props;
+const { examples, tag } = Astro.props;
 ---
 
 <ul>
     {examples.map((example, index) => (
         <li>
-            {example}
+            {example} {tag}
         </li>
     ))}
 </ul>
