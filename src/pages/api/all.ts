@@ -1,5 +1,5 @@
 import type { IToneTag } from "@/types";
-import type { APIContext, APIRoute } from "astro";
+import type {  APIRoute } from "astro";
 
 type Frontmatter = IToneTag["frontmatter"];
 
@@ -9,7 +9,7 @@ interface MarkdownData {
   file: string;
 }
 
-export const GET: APIRoute = async (context: APIContext) => {
+export const GET: APIRoute = async () => {
   const data = import.meta.glob(["../tones/*.{md,mdx}"], { eager: true });
 
   const tonetags = Object.keys(data).map((key) => {

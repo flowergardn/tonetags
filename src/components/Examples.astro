@@ -1,13 +1,14 @@
 ---
 export interface Props {
   examples: string[];
+  tag: string
 }
 
 const { examples, tag } = Astro.props;
 ---
 
 <ul>
-    {examples.map((example, index) => (
+    {examples.map((example) => (
         <li>
             {example} {tag}
         </li>
